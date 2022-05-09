@@ -21,7 +21,7 @@ for k = 1 : length(theFiles)
     % Now do whatever you want with this file name,
     % such as reading it in as an image array with imread()
     imageArray = imread(fullFileName);
-%yukarıdan alınma --------------------------------------------------------
+
     im = double(imageArray);
     im = im/max(im(:));
     im=rgb2gray(im);
@@ -36,7 +36,7 @@ for theta = range
 end
 
 figure, plot(rad2deg(range),dtv)
-%yukarıdan alınma-------------------------------------------------------
+
 
     %J = entropy(imageArray)
     writematrix(dtv,'DTVNorm_ARC_Cropped.csv','WriteMode','append') %appended
